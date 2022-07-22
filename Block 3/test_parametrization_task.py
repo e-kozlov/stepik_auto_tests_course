@@ -12,14 +12,6 @@ def answer():
     return math.log(int(time.time()))
 
 
-@pytest.fixture()
-def browser():
-    d = webdriver.Chrome()
-    d.maximize_window()
-    yield d
-    d.quit()
-
-
 @pytest.mark.parametrize('url', ["https://stepik.org/lesson/236895/step/1", "https://stepik.org/lesson/236896/step/1",
                                  "https://stepik.org/lesson/236897/step/1", "https://stepik.org/lesson/236898/step/1",
                                  "https://stepik.org/lesson/236899/step/1", "https://stepik.org/lesson/236903/step/1",
